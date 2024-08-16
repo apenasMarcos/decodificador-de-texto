@@ -1,0 +1,118 @@
+:root {
+    --dark-bg: #2e2e2e;
+    --dark-text: #ffffff;
+    --dark-text-secondary: #c0c0c0;
+    --dark-button-bg: #343a40;
+    --dark-button-border: #495057;
+    --dark-textarea-color: #c0c0c0;
+}
+
+#btnToggleTheme {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 5   0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    border: 2px solid var(--button-border-dark);
+    background-color: white;
+    color: var(--dark-gray-500);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease, color 1s ease, border-color 1s ease, box-shadow 1s ease;
+}
+
+body.dark-mode #btnToggleTheme {
+    border-color: var(--button-border-dark);
+    background-color: var(--dark-gray-500);
+    color: white;
+}
+
+#btnToggleTheme:hover {
+    background-color: var(--dark-gray-500);
+    color: white;
+    border-color: transparent;
+}
+
+body.dark-mode #btnToggleTheme:hover {
+    background-color: var(--light-blue-100); 
+    color: black;
+}
+
+
+.icon {
+    position: absolute; /* Sobrepõe os ícones um sobre o outro */
+    transition: opacity 1s ease; /* Transição suave entre ícones */
+    font-size: 20px; /* Ajuste conforme necessário */
+}
+
+.sun {
+    opacity: 0; /* Inicialmente oculto */
+}
+
+body.dark-mode #btnToggleTheme .sun {
+    opacity: 1; /* Visível no modo claro */
+}
+
+body.dark-mode #btnToggleTheme .moon {
+    opacity: 0; /* Oculto no modo claro */
+}
+
+body:not(.dark-mode) #btnToggleTheme .sun {
+    opacity: 0; /* Oculto no modo escuro */
+}
+
+body:not(.dark-mode) #btnToggleTheme .moon {
+    opacity: 1; /* Visível no modo escuro */
+}
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    transition: background-color 1s ease, color 1s ease;
+}
+
+body.dark-mode textarea {
+    background-color: var(--dark-bg);
+    color: var(--dark-textarea-color);
+    transition: background-color 1s ease, color 1s ease;
+}
+
+body.dark-mode .box-exclamation {
+    color: var(--dark-text-secondary);
+    transition: color 1s ease;
+}
+
+body.dark-mode .box-controls button#btnDecrypted {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-text);
+    border: none;
+    transition: background-color 1s ease, color 1s ease;    
+}
+
+body.dark-mode .box-controls button:last-child,
+body.dark-mode .grid-item-3 button {
+    background-color: transparent;
+    color: var(--dark-text);
+    border: 1px solid var(--dark-button-border);
+    transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+}
+
+body.dark-mode .box-result-encriptador {
+    background-color: var(--dark-bg);
+    color: var(--dark-text-secondary);
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+}
+
+body.dark-mode .box-result-encriptador h2 {
+    color: var(--dark-text-secondary);
+    transition: color 1s ease;
+}
+
+body.dark-mode .box-result-encriptador .pre-information {
+    color: var(--dark-text-secondary);
+    transition: color 1s ease;
+}

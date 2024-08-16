@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="icon" type="image/x-icon" href="./assets/svg/Logo.svg">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main class="display-grid">
+        <div class="grid-item-1">
+            <img src="./assets/svg/Logo.svg" alt="Logo Alura">
+        </div>
+        <div class="grid-item-2">
+            <textarea name="texto" id="inptTextArea" placeholder="Digite o texto aqui"></textarea>
+            <div class="box-exclamation">
+                <svg width="17px" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="bi bi-exclamation-triangle">
+                    <path d="M7.938 1.016a.5.5 0 0 1 .124.056L14.54 4.487a.5.5 0 0 1 .212.628l-6.46 12a.5.5 0 0 1-.892 0L1.248 5.115a.5.5 0 0 1 .211-.628L7.815 1.07A.5.5 0 0 1 7.938 1.016zM8 6a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 6zm0 5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"/>
+                  </svg>
+                  
+                <small>Apenas letras minúsculas e sem acentos</small>
+            </div>
+            <div class="box-controls">
+                <button id="btnEncrypted">Criptografar</button>
+                <button id="btnDecrypted">Descriptografar</button>
+                <button id="btnToggleTheme" aria-label="Alternar tema">
+                    <span class="icon sun">☀️</span>
+                    <span class="icon moon">🌙</span>
+                </button>
+            </div>
+        </div>
+        <div class="grid-item-3">
+            <div class="box-result-encriptador">
+                <img class="pre-information" src="./assets/svg/Pessoa.svg" alt="mensagem vazia">
+                <h2 class="pre-information">Nenhuma mensagem foi encontrada</h2>
+                <span class="pre-information">Digite o texto que deseja criptografar ou descriptografar.</span>
+                <textarea id="outptTextArea" id="inpt_texto" placeholder="Digite o texto aqui"></textarea>
+                <button id="btnCopyResult">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+       <div class="byDeveloper">
+            <small>Desenvolvido por <a target="_blank" href="https://github.com/apenasMarcos">apenasMarcos</a></small>
+       </div>
+    </footer>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/theme.js"></script>
+</body>
+</html>
