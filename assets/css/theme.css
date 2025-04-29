@@ -8,65 +8,57 @@
 }
 
 #btnToggleTheme {
-    font-size: 20px;
-    padding: 5px;
+    font-size: 1.25rem;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    width: 50px;
-    height: 5   0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
-    border: 2px solid var(--button-border-dark);
-    background-color: white;
+    border: none;
+    background-color: transparent;
     color: var(--dark-gray-500);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 1s ease, color 1s ease, border-color 1s ease, box-shadow 1s ease;
-}
-
-body.dark-mode #btnToggleTheme {
-    border-color: var(--button-border-dark);
-    background-color: var(--dark-gray-500);
-    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #btnToggleTheme:hover {
-    background-color: var(--dark-gray-500);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode #btnToggleTheme {
     color: white;
-    border-color: transparent;
 }
 
 body.dark-mode #btnToggleTheme:hover {
-    background-color: var(--light-blue-100); 
-    color: black;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-
+/* Ícones com transição suave */
 .icon {
-    position: absolute; /* Sobrepõe os ícones um sobre o outro */
-    transition: opacity 1s ease; /* Transição suave entre ícones */
-    font-size: 20px; /* Ajuste conforme necessário */
+    position: absolute;
+    transition: opacity 0.4s ease;
+    font-size: 1.25rem;
 }
 
+/* Controle de visibilidade */
 .sun {
-    opacity: 0; /* Inicialmente oculto */
+    opacity: 0;
 }
 
-body.dark-mode #btnToggleTheme .sun {
-    opacity: 1; /* Visível no modo claro */
+.moon {
+    opacity: 1;
 }
 
-body.dark-mode #btnToggleTheme .moon {
-    opacity: 0; /* Oculto no modo claro */
+body.dark-mode .sun {
+    opacity: 1;
 }
 
-body:not(.dark-mode) #btnToggleTheme .sun {
-    opacity: 0; /* Oculto no modo escuro */
+body.dark-mode .moon {
+    opacity: 0;
 }
 
-body:not(.dark-mode) #btnToggleTheme .moon {
-    opacity: 1; /* Visível no modo escuro */
-}
 /* Estilos para o modo escuro */
 body.dark-mode {
     background-color: var(--dark-bg);
